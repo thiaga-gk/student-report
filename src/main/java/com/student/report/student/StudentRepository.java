@@ -4,13 +4,14 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface StudentRepository extends CrudRepository<Student, Long> {
 
-    Student findById(long studentId);
+    Optional<Student> findById(Long studentId);
 
-    List<Student> findByFirstName(String firstName);
+    List<Student> findByPersonFirstName(String firstName);
 
-    List<Student> findByLastName(String lastName);
+    List<Student> findByPersonLastName(String lastName);
 }
