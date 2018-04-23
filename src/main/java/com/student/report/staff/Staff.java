@@ -1,4 +1,4 @@
-package com.student.report.Staff;
+package com.student.report.staff;
 
 import com.student.report.student.Person;
 import lombok.AccessLevel;

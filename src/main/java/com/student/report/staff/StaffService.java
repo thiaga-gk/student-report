@@ -1,4 +1,4 @@
-package com.student.report.Staff;
+package com.student.report.staff;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

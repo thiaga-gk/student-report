@@ -1,7 +1,7 @@
 package com.student.report.department;
 
-import com.student.report.Staff.Staff;
 import com.student.report.course.Course;
+import com.student.report.staff.Staff;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
