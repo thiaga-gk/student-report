@@ -12,7 +12,7 @@ import java.time.LocalDate;
 
 @Data
 @Embeddable
-@NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Person implements Serializable {
 
     @NonNull
