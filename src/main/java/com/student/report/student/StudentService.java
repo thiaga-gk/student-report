@@ -3,6 +3,7 @@ package com.student.report.student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -13,8 +14,7 @@ public class StudentService {
 
     public Iterable<Student> getAll() {
 
-        Iterable<Student> students = studentRepository.findAll();
-        return students;
+        return studentRepository.findAll();
     }
 
     public Student getStudentById(Long studentId) {
@@ -23,15 +23,13 @@ public class StudentService {
         return student.orElseThrow(IllegalArgumentException::new);
     }
 
-    public Iterable<Student> getStudentsByFirstName(String firstName) {
+    public List<Student> getStudentsByFirstName(String firstName) {
 
-        Iterable<Student> students = studentRepository.findByPersonFirstName(firstName);
-        return students;
+        return studentRepository.findByPersonFirstName(firstName);
     }
 
-    public Iterable<Student> getStudentsByLastName(String lastName) {
+    public List<Student> getStudentsByLastName(String lastName) {
 
-        Iterable<Student> students = studentRepository.findByPersonLastName(lastName);
-        return students;
+        return studentRepository.findByPersonLastName(lastName);
     }
 }
