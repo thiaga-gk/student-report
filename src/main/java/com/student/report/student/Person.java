@@ -3,10 +3,11 @@ package com.student.report.student;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.NonNull;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 import java.time.LocalDate;
 
@@ -15,41 +16,42 @@ import java.time.LocalDate;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Person implements Serializable {
 
-    @NonNull
+    @NotBlank
     @Column(name = "first_name")
     private String firstName;
 
-    @NonNull
+    @NotBlank
     @Column(name = "last_name")
     private String lastName;
 
-    @NonNull
+    @NotBlank
     private String gender;
 
-    @NonNull
+    @Email
+    @NotBlank
     @Column(name = "email_id")
     private String email;
 
-    @NonNull
+    @NotBlank
     @Column(name = "phone_number")
     private Long phone;
 
-    @NonNull
+    @NotBlank
     private String address;
 
-    @NonNull
+    @NotBlank
     @Column(name = "birth_date")
     private LocalDate birthDate;
 
-    @NonNull
+    @NotBlank
     @Column(name = "fulltime_status")
     private Boolean fullTime;
 
-    @NonNull
+    @NotBlank
     @Column(name = "enrollment_status")
     private String enrollmentStatus;
 
-    @NonNull
+    @NotBlank
     @Column(name = "start_date")
     private LocalDate startDate;
 
